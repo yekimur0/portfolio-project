@@ -1,0 +1,54 @@
+// reset //////////////////////////////////////
+@import './components/reset.scss';
+// reset //////////////////////////////////////
+
+
+
+// vars //////////////////////////////////////
+@import './components/vars.scss';
+// vars //////////////////////////////////////
+
+// global //////////////////////////////////////
+@import './components/global.scss';
+// global //////////////////////////////////////
+
+// font //////////////////////////////////////
+@import './components/font.scss';
+// font //////////////////////////////////////
+
+// UI //////////////////////////////////////
+@import './components/ui.scss';
+// UI //////////////////////////////////////
+
+$widthContainer: 1200;
+$fontFamily: 'Roboto', sans-serif;
+
+.container {
+    width: $widthContainer + px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+body.overlay {
+    overflow: hidden;
+    touch-action: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media(max-width: $phone) {
+   body.lock {
+    overflow: hidden;
+    touch-action: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+   }
+ 
+    
+}
+
