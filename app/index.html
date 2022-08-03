@@ -9,9 +9,122 @@
 </head>
 <body>
         
-   <div class="page">
-        <header class="header"></header>
-   </div>
+    <div class="floor"> 
+
+         <header class="header">
+            <div class="container">
+                <!-- navbar -->
+                <nav class="navbar">
+                    <div class="logo"><a href="#"><img src="./image/logo.svg" alt="Logo"></a></div>
+                    <!-- menu -->
+                    <div class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__list-item"><a href="#">About</a></li>
+                            <li class="menu__list-item"><a href="#">Projects</a></li>
+                            <li class="menu__list-item"><a href="#">Reviews</a></li>
+                            <li class="menu__list-item"><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <!-- menu end -->
+                </nav>
+                <!-- navbar -->
+            </div>
+         </header>   
+
+         <div class="person">
+            <div class="person__item">
+                <h1 class="title">Ruslan Pavlov</h1>
+                <h2 class="subtitle">I' m  web developer</h2>
+
+                <div class="skills">
+                    <div class="skills__item">HTML5</div>
+                    <div class="skills__item">CSS3</div>
+                    <div class="skills__item">Java script</div>
+                    <div class="skills__item">Wordpress</div>
+                    <div class="skills__item">React</div>
+                </div>
+            </div>
+            <div class="person__item canvas__item"><canvas id="canvasOne" width="900" height="520">
+                Your browser does not support HTML5 canvas.
+            </canvas></div>
+         </div>
+
+         <section class="section__about about">
+            <div class="container">
+                <p class="about__desc small-text">About</p>
+                <h2 class="about__title _title">History of my development:</h2>
+
+                <div class="about__road road">
+                    <div class="road__col">
+                        <h3 class="road__title">2020</h3>
+                        <p class="road__subtitle">first project. Website for a restaurant</p>    
+                    </div>
+                    <div class="road__col">
+                        <h3 class="road__title">2021</h3>
+                        <p class="road__subtitle">Development more</p>    
+                    </div>
+                    <div class="road__col">
+                        <h3 class="road__title">2022</h3>
+                        <p class="road__subtitle">Development more</p>    
+                    </div>
+                  
+                </div>
+            </div>
+         </section>
+         
+         <section class="section__project project">
+            <div class="container">
+                <p class="project__subtitle small-text">Projects</p>
+                <h2 class="project__title _title">Projects on different topics:</h2>
+                <!-- Табы -->
+                <div class="tabs">
+                   <div class="tabs__items">
+                    <div class="tabs__items-item">Landing page</div>   
+                    <div class="tabs__items-item">Internet shop</div>   
+                    <div class="tabs__items-item">Single page aplication</div>   
+                    <div class="tabs__items-item">Page delevery food</div>   
+                </div>   
+
+                <div class="tab__content">
+                    <h4 class="title">Landing page</h4>
+                    <div class="col">
+                        <div class="item js-accordion">
+                            <div class="item__container">
+                                <div class="item__title">Landing page #1</div>
+                                <a href="#" class="item__link hidden">Some kind of link to the site</a>
+                            </div>
+                            <button class="item__btn js-accordion-btn"><img src="./image/arrow.svg" alt=""></button>
+                        </div>
+                        <div class="item js-accordion">
+                            <div class="item__container">
+                                <div class="item__title">Landing page #2</div>
+                                <a href="#" class="item__link hidden">Some kind of link to the site</a>
+                            </div>
+                            <button class="item__btn js-accordion-btn"><img src="./image/arrow.svg" alt=""></button>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                </div>
+                <!-- Табы -->
+
+            </div>
+         </section>
+
+         <section class="section__hours hours">
+            <div class="container">
+                <div class="hours__inner">
+                   <div class="hours__info">
+                    <h2 class="hours__title">Write to me and I will answer within the next 24 hours</h2>
+                    <p class="hours__subtitle">Discuss the project</p>
+                   </div>
+                </div>
+            </div>
+         </section>
+
+    </div>
+
 
 
     <script src="js/index.min.js"></script>
