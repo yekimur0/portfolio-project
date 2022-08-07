@@ -1,132 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>Document</title>
-</head>
-<body>
-        
-    <div class="floor"> 
-
-         <header class="header">
-            <div class="container">
-                <!-- navbar -->
-                <nav class="navbar">
-                    <div class="logo"><a href="#"><img src="./image/logo.svg" alt="Logo"></a></div>
-                    <!-- menu -->
-                    <div class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__list-item"><a href="#">About</a></li>
-                            <li class="menu__list-item"><a href="#">Projects</a></li>
-                            <li class="menu__list-item"><a href="#">Reviews</a></li>
-                            <li class="menu__list-item"><a href="#">Contacts</a></li>
-                        </ul>
-                    </div>
-                    <!-- menu end -->
-                </nav>
-                <!-- navbar -->
+  </head>
+  <body>
+    <div class="floor">
+      <header class="header">
+        <div class="container">
+          <!-- navbar -->
+          <nav class="navbar">
+            <div class="logo">
+              <a href="#"><img src="./image/logo.svg" alt="Logo" /></a>
             </div>
-         </header>   
+            
+           <div class="mobile-menu">
+            <button class="nav-toggle">
+            <span class="bar-top"></span>
+            <span class="bar-mid"></span>
+            <span class="bar-bot"></span>
+          </button>
+        </div>
+              <!-- menu -->
+            <div class="menu">
+              <ul class="menu__list">
+                <li class="menu__list-item"><a href="#">About</a></li>
+                <li class="menu__list-item"><a href="#">Projects</a></li>
+                <li class="menu__list-item"><a href="#">Reviews</a></li>
+                <li class="menu__list-item"><a href="#">Contacts</a></li>
+              </ul>
+            </div>
+            <!-- menu end -->
+          </nav>
+          <!-- navbar -->
+        </div>
+      </header>
 
-         <div class="person">
+      <div class="person">
+        <div class="container">
+          <div class="person__body">
             <div class="person__item">
-                <h1 class="title">Ruslan Pavlov</h1>
-                <h2 class="subtitle">I' m  web developer</h2>
-
-                <div class="skills">
-                    <div class="skills__item">HTML5</div>
-                    <div class="skills__item">CSS3</div>
-                    <div class="skills__item">Java script</div>
-                    <div class="skills__item">Wordpress</div>
-                    <div class="skills__item">React</div>
-                </div>
+              <h1 class="title">Ruslan Pavlov</h1>
+              <h2 class="subtitle">I' m web developer</h2>
+              
+              <div class="skills">
+                <div class="skills__item">HTML5</div>
+                <div class="skills__item">CSS3</div>
+                <div class="skills__item">Javascript</div>
+                <div class="skills__item">Wordpress</div>
+                <div class="skills__item">React</div>
+              </div>
             </div>
-            <div class="person__item canvas__item"><canvas id="canvasOne" width="900" height="520">
+            <div class="person__item canvas__item">
+              <canvas id="canvasOne" width="900" height="520">
                 Your browser does not support HTML5 canvas.
-            </canvas></div>
-         </div>
+              </canvas>
+            </div>
+          </div>
+        </div>
+      </div>
 
-         <section class="section__about about">
-            <div class="container">
-                <p class="about__desc small-text">About</p>
-                <h2 class="about__title _title">History of my development:</h2>
+      <section class="section__about about">
+        <div class="container">
+          <p class="about__desc small-title">About</p>
+          <h2 class="about__title _title">History of my development:</h2>
 
-                <div class="about__road road">
-                    <div class="road__col">
-                        <h3 class="road__title">2020</h3>
-                        <p class="road__subtitle">first project. Website for a restaurant</p>    
+          <div class="about__road road">
+            <div class="road__col">
+              <h3 class="road__title">2020</h3>
+              <p class="road__subtitle">
+                first project. Website for a restaurant
+              </p>
+            </div>
+            <div class="road__col">
+              <h3 class="road__title">2021</h3>
+              <p class="road__subtitle">Development more</p>
+            </div>
+            <div class="road__col">
+              <h3 class="road__title">2022</h3>
+              <p class="road__subtitle">Development more</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__project project">
+        <div class="container">
+          <p class="project__subtitle small-title">Projects</p>
+          <h2 class="project__title _title">Projects on different topics:</h2>
+          <!-- Табы -->
+          <div class="tabs" data-tabs="tab">
+            <div class="tabs__nav tabs__items">
+              <li class="tabs__items-item tabs__nav-item"><button class="tabs__nav-btn" type="button">Landing page</button></li>
+              <li class="tabs__items-item tabs__nav-item"><button class="tabs__nav-btn" type="button">Internet shop</button></li>
+              <li class="tabs__items-item tabs__nav-item"><button class="tabs__nav-btn" type="button">Single page aplication</button></li>
+              <li class="tabs__items-item tabs__nav-item"><button class="tabs__nav-btn" type="button">Page delevery food</button></li>
+            </div>
+
+            <div class="tab__content">
+              <div class="tabs__panel">
+                <h4 class="title">Landing page</h4>
+                <div class="col">
+                  <div class="item js-accordion">
+                    <div class="item__container">
+                      <div class="item__title">Landing page #1</div>
+                      <a href="#" class="item__link hidden"
+                        >Some kind of link to the site</a
+                      >
                     </div>
-                    <div class="road__col">
-                        <h3 class="road__title">2021</h3>
-                        <p class="road__subtitle">Development more</p>    
+                    <button class="item__btn js-accordion-btn">
+                      <img src="./image/arrow.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="item js-accordion">
+                    <div class="item__container">
+                      <div class="item__title">Landing page #2</div>
+                      <a href="#" class="item__link hidden"
+                        >Some kind of link to the site</a
+                      >
                     </div>
-                    <div class="road__col">
-                        <h3 class="road__title">2022</h3>
-                        <p class="road__subtitle">Development more</p>    
+                    <button class="item__btn js-accordion-btn">
+                      <img src="./image/arrow.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tabs__panel">
+                <h4 class="title">Internet shop</h4>
+                <div class="col">
+                  <div class="item js-accordion">
+                    <div class="item__container">
+                      <div class="item__title">Internet shop #1</div>
+                      <a href="#" class="item__link hidden"
+                        >Some kind of link to the site</a
+                      >
                     </div>
+                    <button class="item__btn js-accordion-btn">
+                      <img src="./image/arrow.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="item js-accordion">
+                    <div class="item__container">
+                      <div class="item__title">Internet shop #2</div>
+                      <a href="#" class="item__link hidden"
+                        >Some kind of link to the site</a
+                      >
+                    </div>
+                    <button class="item__btn js-accordion-btn">
+                      <img src="./image/arrow.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tabs__panel">
+                <h4 class="title">Single page aplication</h4>
+                <div class="col">
+                  <div class="item js-accordion">
+                    <div class="item__container">
+                      <div class="item__title">Single page aplication #1</div>
+                      <a href="#" class="item__link hidden"
+                        >Some kind of link to the site</a
+                      >
+                    </div>
+                    <button class="item__btn js-accordion-btn">
+                      <img src="./image/arrow.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="item js-accordion">
+                    <div class="item__container">
+                      <div class="item__title">Single page aplication #2</div>
+                      <a href="#" class="item__link hidden"
+                        >Some kind of link to the site</a
+                      >
+                    </div>
+                    <button class="item__btn js-accordion-btn">
+                      <img src="./image/arrow.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tabs__panel">
+                <h4 class="title">Page delevery food</h4>
+                <div class="col">
+                  <div class="item js-accordion">
+                    <div class="item__container">
+                      <div class="item__title">Page delevery food #1</div>
+                      <a href="#" class="item__link hidden"
+                        >Some kind of link to the site</a
+                      >
+                    </div>
+                    <button class="item__btn js-accordion-btn">
+                      <img src="./image/arrow.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="item js-accordion">
+                    <div class="item__container">
+                      <div class="item__title">Page delevery food #2</div>
+                      <a href="#" class="item__link hidden"
+                        >Some kind of link to the site</a
+                      >
+                    </div>
+                    <button class="item__btn js-accordion-btn">
+                      <img src="./image/arrow.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Табы -->
+        </div>
+      </section>
+
+      <section class="section__hours hours">
+        <div class="container">
+          <div class="hours__inner">
+            <div class="hours__info">
+              <h2 class="hours__title">
+                Write to me and I will answer within the next 24 hours
+              </h2>
+              <p class="hours__subtitle">Discuss the project</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__reviews reviews">
+        <div class="container">
+          <p class="reviews__subtitle small-title">Reviews</p>
+          <h2 class="reviews__title _title">What my clients say about me:</h2>
+
+           <div class="reviews__body">
+            <div class="arrow-nav">
+                <div class="button-next"><img src="./image/arrow-left.svg" alt=""></div>
+                <div class="button-prev"><img src="./image/arrow-right.svg" alt=""></div>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="slide__img">
+                        <img src="./image/slider/r1.png" alt=""></div>
+                        <div class="slide__title">Lincoln Burrows</div>
+                        <div class="slide__subtitle">Thanks to Michael for doing everything efficiently on time and without broaches. I recommend this specialist for work. Special thanks to Michael for the work that was not included in the original.</div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide__img">
+                        <img src="./image/slider/r2.png" alt=""></div>
+                        <div class="slide__title">Gretchen Morgan</div>
+                        <div class="slide__subtitle">Thank you very much for your work, the project was completed very quickly and efficiently. I recommend it as a reliable performer! I will contact you in the future.</div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide__img">
+                        <img src="./image/slider/r3.png" alt=""></div>
+                        <div class="slide__title">Paul Kellerman</div>
+                        <div class="slide__subtitle">The performer who specifically understands the task. Very cool and easy to communicate. I did an excellent job, I will contact you. I advise everyone!</div>
+                  </div>
                   
                 </div>
-            </div>
-         </section>
-         
-         <section class="section__project project">
-            <div class="container">
-                <p class="project__subtitle small-text">Projects</p>
-                <h2 class="project__title _title">Projects on different topics:</h2>
-                <!-- Табы -->
-                <div class="tabs">
-                   <div class="tabs__items">
-                    <div class="tabs__items-item">Landing page</div>   
-                    <div class="tabs__items-item">Internet shop</div>   
-                    <div class="tabs__items-item">Single page aplication</div>   
-                    <div class="tabs__items-item">Page delevery food</div>   
-                </div>   
+              </div>
+           </div> 
 
-                <div class="tab__content">
-                    <h4 class="title">Landing page</h4>
-                    <div class="col">
-                        <div class="item js-accordion">
-                            <div class="item__container">
-                                <div class="item__title">Landing page #1</div>
-                                <a href="#" class="item__link hidden">Some kind of link to the site</a>
-                            </div>
-                            <button class="item__btn js-accordion-btn"><img src="./image/arrow.svg" alt=""></button>
-                        </div>
-                        <div class="item js-accordion">
-                            <div class="item__container">
-                                <div class="item__title">Landing page #2</div>
-                                <a href="#" class="item__link hidden">Some kind of link to the site</a>
-                            </div>
-                            <button class="item__btn js-accordion-btn"><img src="./image/arrow.svg" alt=""></button>
-                        </div>
-                       
-                    </div>
-                </div>
+        </div>
+      </section>
 
-                </div>
-                <!-- Табы -->
-
-            </div>
-         </section>
-
-         <section class="section__hours hours">
-            <div class="container">
-                <div class="hours__inner">
-                   <div class="hours__info">
-                    <h2 class="hours__title">Write to me and I will answer within the next 24 hours</h2>
-                    <p class="hours__subtitle">Discuss the project</p>
-                   </div>
-                </div>
-            </div>
-         </section>
-
+     
     </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__bg"><img src="./image/footer.png" alt="footer-bg"></div>
+        <div class="footer__content">
+          <h3 class="footer__title">Calculate the timing and cost of your project</h3>
+          <p class="footer__description">Leave your phone number for communication</p>
 
+          <form action="" class="footer__form">
+            <div class="footer__form-block">
+              <label for="name" class="footer__label">Name</label>
+              <input type="text" name="name" id="name">
+            </div>
+            <div class="footer__form-block">
+              <label for="phone" class="footer__label">Phone</label>
+              <input type="text" name="phone" id="phone">
+            </div>
 
+            <div class="footer__form-block">
+              <label for="messasge" class="footer__label">Message</label>
+              <textarea name="message" id="messasge" cols="30" rows="5"></textarea>
+            </div>
+          </form>
+        </div>
+      </div>  
+    </footer>
 
+    <script src="js/tabs.js"></script>
     <script src="js/index.min.js"></script>
-</body>
+  </body>
 </html>

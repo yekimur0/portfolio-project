@@ -1,5 +1,13 @@
-const accordionItem = document.querySelectorAll('.js-accordion-btn')
+const tabs1 = new meTabs('tab', {
+    isChaged: () => {}
+})
 
+/* фокус на таб */
+// tabs1.switchTabs(document.querySelector('#tab2'))
+
+const accordionItem = document.querySelectorAll('.js-accordion-btn')
+const mobileMenu = document.querySelector('.mobile-menu')
+const menuList = document.querySelector('.menu')
 
 accordionItem.forEach(item => {
     item.addEventListener('click', (e) => {
@@ -13,6 +21,13 @@ accordionItem.forEach(item => {
 })
 
 
+mobileMenu.addEventListener('click', openMenu)
+
+function openMenu () {
+	mobileMenu.classList.toggle('opened')
+	menuList.classList.toggle('active-menu')
+	document.querySelector('body').classList.toggle('lock')
+}
 
 
 
@@ -36,7 +51,21 @@ accordionItem.forEach(item => {
 
 
 
-
+const swiper = new Swiper('.swiper', {
+	spaceBetween: 20,
+	navigation: {
+		nextEl: ".button-prev",
+		prevEl: ".button-next",
+	  },
+	  breakpoints: {
+		320: {
+		  slidesPerView: 1,
+		},
+		768: {
+		  slidesPerView: 2,
+		},
+	  },
+}) 
 
 window.addEventListener("load", windowLoadHandler, false);
 

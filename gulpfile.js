@@ -22,6 +22,7 @@ function cleanDist() {
 function scripts () {
     return src([
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/swiper/swiper-bundle.min.js',
         'app/js/index.js'
     ])
     .pipe(concat('index.min.js'))
@@ -51,7 +52,10 @@ function images () {
 
 
 function styles () {
-    return src('app/scss/style.scss')
+    return src([
+        'node_modules/swiper/swiper.scss',
+        'app/scss/style.scss',
+    ])
         .pipe(sass({
             outputStyle: 'compressed'
         }))
