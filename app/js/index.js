@@ -8,6 +8,15 @@ const tabs1 = new meTabs('tab', {
 const accordionItem = document.querySelectorAll('.js-accordion-btn')
 const mobileMenu = document.querySelector('.mobile-menu')
 const menuList = document.querySelector('.menu')
+const footerForm = document.querySelector('.footer__form')
+const modalForm = document.querySelector('.modal-form')
+const inputPhone = document.querySelector('#phone')
+const inputName = document.querySelector('#name')
+const sendBtn = document.querySelector('.js-form-btn')
+const linkMenu = document.querySelectorAll('.menu-link-js')
+const modal = document.querySelector('.modal')
+const closeModalBtn = document.querySelector('.modal__close')
+const hoursBtn = document.querySelector('.hours__btn')
 
 accordionItem.forEach(item => {
     item.addEventListener('click', (e) => {
@@ -29,6 +38,55 @@ function openMenu () {
 	document.querySelector('body').classList.toggle('lock')
 }
 
+// footer form valid
+footerForm.onsubmit = function () {
+	if (inputPhone.value == '') {
+		inputPhone.classList.add('_req')
+		return false;
+	}
+	if (inputPhone.value !== '') {
+		inputPhone.classList.remove('_req')
+	}
+
+	if(inputName.value == '') {
+		inputName.classList.add('_req')
+		return false;
+	}
+
+	if (inputName.value !== '') {
+		inputPhone.classList.remove('_req')
+	}
+}
+
+// modal form validation
+modalForm.onsubmit = function () {
+	const inputName = document.querySelector('#name-modal')
+	const inputPhone = document.querySelector('#phone-modal')
+	if (inputName.value == '') {
+		inputName.classList.add('_req')
+		return false;
+	}
+
+	if (inputPhone.value == '') {
+		inputPhone.classList.add('_req')
+		return false;
+	}
+	
+}
+// закрытие меню по нажатию на ссылку
+linkMenu.forEach(item => {
+	item.addEventListener('click', (e) => {
+		mobileMenu.classList.remove('opened')
+		menuList.classList.remove('active-menu')
+		document.querySelector('body').classList.remove('lock')
+	})
+})
+
+// open modal
+hoursBtn.addEventListener('click', () => 	modal.style.display = 'flex')
+
+// close modal
+closeModalBtn.addEventListener('click', () =>  modal.style.display = 'none')
 
 
 
@@ -40,17 +98,14 @@ function openMenu () {
 
 
 
+/////////////// PLUGINS ///////////////////////
 
+// jquery mask -> 
+$('._phone').mask('+7 (999) 999-99-99');
+// smooth-scroll
+var scroll = new SmoothScroll('a[href*="#"]');
 
-
-
-
-
-
-
-
-
-
+// swiper
 const swiper = new Swiper('.swiper', {
 	spaceBetween: 20,
 	navigation: {
@@ -66,6 +121,7 @@ const swiper = new Swiper('.swiper', {
 		},
 	  },
 }) 
+// swiper
 
 window.addEventListener("load", windowLoadHandler, false);
 

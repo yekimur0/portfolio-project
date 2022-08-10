@@ -19,6 +19,7 @@
 // UI //////////////////////////////////////
 @import './components/ui.scss';
 // UI //////////////////////////////////////
+@import './components/modal.scss';
 
 $widthContainer: 1330;
 
@@ -470,9 +471,13 @@ body {
             -o-border-radius: 50%;
 }
     }
-    &__subtitle {
+    &__btn {
         font-weight: 400;
         font-size: 16px;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        cursor: pointer;
         line-height: 150%;
     }
 }
@@ -576,13 +581,22 @@ body {
 
 
 .footer {
-    background-color: #121212;   
+    background-color: #121212;
+    padding: 20px 15px;   
     &__container {
         display: flex;
         align-items: center;
     }
+    &__bg {
+        @media(max-width: $tabletlg) {
+            display: none;
+        }
+    }
     &__content {
-        flex: 0 0 30%;
+        flex: 0 0 auto;
+        @media(max-width: $tabletlg) {
+            flex: 0 0 100%;
+        }
     }
     &__title {
         font-size: 2rem;
@@ -616,6 +630,10 @@ body {
                 
                 color: #fff;
                 padding-bottom: 5px;
+                &._req {
+                    transition: 0.3s ease;
+                    border-color: rgb(244, 86, 86);
+                }
             }
 
             textarea {
@@ -625,6 +643,57 @@ body {
                 color: #fff;
                 padding: 5px;
                 border-bottom: 1px solid #fff;;
+            }
+        }
+        &-send {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 4.5rem;
+            &--btn {
+                font-size: 1rem;
+                color: #fff;
+                background-color: transparent;
+                border: none;
+                line-height: 1.15;
+                position: relative;
+                z-index: 3;
+                cursor: pointer;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: -20px;
+                    left: -20px;
+                    width: 4rem;
+                    height: 4rem;
+                    background-color: #1378ef;
+                    border-radius: 50%;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .footer-social__subtitle {
+        font-size: .9rem;
+        line-height: 150%;
+        color: #e2e2e2;
+        padding-top: 4rem;
+        letter-spacing: 0.1em;
+    }
+    .footer-social__list {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        .footer-social__item {
+            &:not(:last-child) {
+                margin-right: 1rem;
             }
         }
     }

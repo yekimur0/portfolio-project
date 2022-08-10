@@ -22,6 +22,8 @@ function cleanDist() {
 function scripts () {
     return src([
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
+        'node_modules/smooth-scroll/dist/smooth-scroll.min.js',
         'node_modules/swiper/swiper-bundle.min.js',
         'app/js/index.js'
     ])

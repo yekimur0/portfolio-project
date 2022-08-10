@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/style.min.css" />
-    <title>Document</title>
+    <title>Jay dev</title>
   </head>
   <body>
     <div class="floor">
@@ -27,10 +27,10 @@
               <!-- menu -->
             <div class="menu">
               <ul class="menu__list">
-                <li class="menu__list-item"><a href="#">About</a></li>
-                <li class="menu__list-item"><a href="#">Projects</a></li>
-                <li class="menu__list-item"><a href="#">Reviews</a></li>
-                <li class="menu__list-item"><a href="#">Contacts</a></li>
+                <li class="menu__list-item"><a class="menu-link-js" href="#about">About</a></li>
+                <li class="menu__list-item"><a class="menu-link-js" href="#projects">Projects</a></li>
+                <li class="menu__list-item"><a class="menu-link-js" href="#reviews">Reviews</a></li>
+                <li class="menu__list-item"><a class="menu-link-js" href="#contacts">Contacts</a></li>
               </ul>
             </div>
             <!-- menu end -->
@@ -52,6 +52,8 @@
                 <div class="skills__item">Javascript</div>
                 <div class="skills__item">Wordpress</div>
                 <div class="skills__item">React</div>
+                <div class="skills__item">gulp</div>
+                <div class="skills__item">webpack</div>
               </div>
             </div>
             <div class="person__item canvas__item">
@@ -63,7 +65,7 @@
         </div>
       </div>
 
-      <section class="section__about about">
+      <section class="section__about about" id="about">
         <div class="container">
           <p class="about__desc small-title">About</p>
           <h2 class="about__title _title">History of my development:</h2>
@@ -87,7 +89,7 @@
         </div>
       </section>
 
-      <section class="section__project project">
+      <section class="section__project project" id="projects">
         <div class="container">
           <p class="project__subtitle small-title">Projects</p>
           <h2 class="project__title _title">Projects on different topics:</h2>
@@ -226,13 +228,15 @@
               <h2 class="hours__title">
                 Write to me and I will answer within the next 24 hours
               </h2>
-              <p class="hours__subtitle">Discuss the project</p>
+              <button class="hours__btn">Discuss the project</button>
             </div>
           </div>
         </div>
+
+        
       </section>
 
-      <section class="section__reviews reviews">
+      <section class="section__reviews reviews" id="reviews">
         <div class="container">
           <p class="reviews__subtitle small-title">Reviews</p>
           <h2 class="reviews__title _title">What my clients say about me:</h2>
@@ -272,7 +276,7 @@
 
      
     </div>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="footer__container">
         <div class="footer__bg"><img src="./image/footer.png" alt="footer-bg"></div>
         <div class="footer__content">
@@ -286,17 +290,55 @@
             </div>
             <div class="footer__form-block">
               <label for="phone" class="footer__label">Phone</label>
-              <input type="text" name="phone" id="phone">
+              <input type="tel" name="phone" id="phone" class="_phone">
             </div>
 
             <div class="footer__form-block">
               <label for="messasge" class="footer__label">Message</label>
               <textarea name="message" id="messasge" cols="30" rows="5"></textarea>
             </div>
+
+            <div class="footer__form-send">
+              <button type="submit" class="footer__form-send--btn js-form-btn">Discuss the project</button>
+            </div>
           </form>
         </div>
+
+        
       </div>  
+
+      <div class="footer__social footer-social">
+        <p class="footer-social__subtitle">My social links</p>
+        <ul class="footer-social__list">
+          <li class="footer-social__item"><a href="https://instagram.com/jay_ql"><img src="./image/social/instagram.svg" alt="socail link"></a></li>
+          <li class="footer-social__item"><a href="https://github.com/yekimur0"><img src="./image/social/github.svg" alt=""></a></li>
+          <li class="footer-social__item"><a href="https://tlgg.ru/yekimuro"><img src="./image/social/tg.svg" alt=""></a></li>
+          <li class="footer-social__item"><a href="https://vk.com/elll96"><img src="./image/social/vk.svg" alt=""></a></li>
+        </ul>
+      </div>
     </footer>
+
+    <div class="modal">
+      <div class="modal__container">
+
+      <div class="modal__close"><img src="./image/close.svg" alt=""></div>
+        <div class="modal__title">Contact me:</div>
+
+        <form action="" class="modal__form modal-form">
+          <div class="modal-form__block">
+            <label for="name-modal" class="modal-form__label">Name</label>
+            <input type="text" id="name-modal" class="modal-form__input">
+          </div>
+          <div class="modal-form__block">
+            <label for="phone-modal" class="modal-form__label">Phone</label>
+            <input type="text" id="phone-modal" class="modal-form__input _phone">
+          </div>
+
+          <button type="submit" class="modal-form__btn">Discuss the project</button>
+        </form>
+      </div>
+    </div>
+    
 
     <script src="js/tabs.js"></script>
     <script src="js/index.min.js"></script>
